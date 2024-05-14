@@ -1,0 +1,26 @@
+<!-- form.component.html -->
+
+<div>
+  <h2 class="title">Pesquisar coleção</h2>
+
+  <form (ngSubmit)="submitForm()">
+    <div>
+      <label for="name">Nome:</label>
+      <input type="text" id="name" name="name" [(ngModel)]="formData.name" required>
+    </div>
+
+
+
+    <div>
+      <label for="block">Bloco:</label>
+      <select id="block" name="block" [(ngModel)]="formData.block" required>
+        <option value="male">Amonkhet</option>
+        <option value="female">Ixalan</option>
+        <option value="other">Zendikar</option>
+        <option value="other">Ravnica</option>
+        <option value="other">Onslaught</option>
+      </select>
+    </div>
+    <button type="submit">Buscar</button>
+  </form>
+</div>
