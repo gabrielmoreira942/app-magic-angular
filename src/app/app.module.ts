@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import SearchComponent from 'src/app/search/search.component';
-
 @NgModule({
   declarations: [
     AppComponent,

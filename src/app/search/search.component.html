@@ -9,16 +9,10 @@
       <input type="text" id="name" name="name" [(ngModel)]="formData.name" required>
     </div>
 
-
-
     <div>
-      <label for="block">Bloco:</label>
-      <select id="block" name="block" [(ngModel)]="formData.block" required>
-        <option value="male">Amonkhet</option>
-        <option value="female">Ixalan</option>
-        <option value="other">Zendikar</option>
-        <option value="other">Ravnica</option>
-        <option value="other">Onslaught</option>
+      <label for="block">Bloco: </label>
+      <select id="block" name="block" [(ngModel)]="formData.blocks" required>
+        <option *ngFor="let block of formData.blocks" [value]="block.name">{{ block.name }}</option>
       </select>
     </div>
     <button type="submit">Buscar</button>
